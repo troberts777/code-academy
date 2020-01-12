@@ -1,0 +1,193 @@
+n = [1, 3, 5]
+# Do your multiplication here
+# multiply second element by 5 and replace it 
+n[1] = n[1] * 5
+
+# Append the number 4 here at end of list
+n.append(4)
+
+# Remove the first item in the list here
+n.remove(1)
+
+# print the list
+print n
+
+
+### Function exercise
+number = 5
+
+def my_function(x):
+    return x * 3
+
+print my_function(number)
+
+### Funtions adding exercise
+m = 5
+n = 13
+# Add add_function here!
+def add_function(m, n):
+  return m + n
+
+print add_function(m, n)
+
+###adding string functions
+n = "Hello"
+# Your function here!
+def string_function(s):
+	return s + 'world'
+
+print string_function(n)
+
+### passing a list to a function
+def list_function(x):
+    return x
+
+n = [3, 5, 7]
+print list_function(n)
+
+###change function to return on the item stored in index 1
+def list_function(x):
+  return x[1]
+
+n = [3, 5, 7]
+print list_function(n) 
+
+### add 3 to the item at index 1 of the list and store the result back into index 1
+def list_function(x):
+  x[1] = x[1] + 3
+  return x
+
+n = [3, 5, 7]
+print list_function(n)
+
+
+# Define a function called list_extender that has one parameter lst.
+# Inside the function, append the number 9 to lst.
+# Then return the modified lis
+n = [3, 5, 7]
+# Add your function here
+def list_extender(lst):
+  lst.append(9)
+  return lst
+  
+  
+#Create a function called double_list that takes a single argument x 
+#(which will be a list) and multiplies each element by 2 and returns that list. Use the existing code as a scaffold.
+n = [3, 5, 7]
+
+def double_list(x):
+  for i in range(0, len(x)):
+    x[i] = x[i] * 2
+# Don't forget to return your new list!
+  return x
+
+print double_list(n)
+  
+  
+
+print list_extender(n)
+
+
+# Define a function called print_list that has one argument called x.
+# Inside that function, print out each element one by one. Use the existing code as a scaffold.
+# Then call your function with the argument n.
+n = [3, 5, 7]
+
+def print_list(x):
+  for i in range(0, len(x)):
+    print x[i]
+    
+print_list(n)
+
+
+#On line 6, replace the ____ with a range() that returns a list containing [0, 1, #2].
+
+def my_function(x):
+  for i in range(0, len(x)):
+    x[i] = x[i]
+  return x
+
+print my_function(range(3)) # Add your range between the parentheses!
+
+
+#Create a function that returns the sum of a list of numbers.
+#On line 3, define a function called total that accepts one argument called #numbers. It will be a list.
+#Inside the function, create a variable called result and set it to zero.
+#Using one of the two methods above, iterate through the numbers list. For each #number, add it to result.
+#Finally, return result.
+
+n = [3, 5, 7]
+
+def total(numbers):
+  result = 0
+  for i in range(0,len(numbers)):
+    result += numbers[i]
+  return result
+  
+  
+  #Create a function that concatenates strings.
+#Define a function called join_strings accepts an argument called words. It will #be a list.
+#Inside the function, create a variable called result and set it to "", an empty #string.
+#Iterate through the words list and concatenate each word to result.
+#Finally, return the result.
+#Don’t add spaces between the joined strings!
+n = ["Michael", "Lieberman"]
+# Add your function here
+def join_strings(words):
+  result = ""
+  for i in range(0,len(words)):
+    result += words[i] 
+   
+  return result 
+
+print join_strings(n)
+
+
+#Create a function that joins two lists together.
+#On line 5, define a function called join_lists that has two arguments, x and y. #They will both be lists.
+#Inside that function, return the result of concatenating x and y together.
+m = [1, 2, 3]
+n = [4, 5, 6]
+
+# Add your code here!
+def join_lists(m, n):
+  return m + n
+
+
+
+print join_lists(m, n)
+# You want this to print [1, 2, 3, 4, 5, 6]
+
+
+#Create a function called flatten that takes a single list and concatenates all #the sublists that are part of it into a single list.
+#On line 3, define a function called flatten with one argument called lists.
+#Make a new, empty list called results.
+#Iterate through lists. Call the looping variable numbers.
+#Iterate through numbers.
+#For each number, .append() it to results.
+#Finally, return results from your function.
+#second for statement gets rid of brackets
+n = [[1, 2, 3], [4, 5, 6, 7, 8, 9]]
+# Add your function here
+def flatten(lists):
+  results = []
+  for numbers in lists:
+    results.append(numbers)
+  return results
+  
+
+
+
+print flatten(n)
+
+n = [[1, 2, 3], [4, 5, 6, 7, 8, 9]]
+# Add your function here
+
+def flatten(lists):
+  results = []
+  for numbers in lists:
+    for number in numbers:
+      results.append(number)
+  return results
+
+print flatten(n)
