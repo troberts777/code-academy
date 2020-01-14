@@ -1,1 +1,242 @@
+#1/19
 
+count = 0
+
+if count <= 9:
+  print "Hello, I am an if statement and count is", count
+
+while count <= 9:
+  print "Hello, I am a while and count is", count
+  count += 1
+
+
+#2/19
+loop_condition = True
+
+while loop_condition:
+  print "I am a loop"
+  loop_condition = False
+  
+  #3/19
+  num = 1
+
+while num <= 10:  # Fill in the condition
+  # Print num squared
+  print num ** 2
+  # Increment num (make sure to do this!)
+  num = num + 1
+  
+  #4/19
+  choice = raw_input('Enjoying the course? (y/n)')
+
+while choice != "y" and choice != "n":  # Fill in the condition (before the colon)
+  choice = raw_input("Sorry, I didn't catch that. Enter again: ")
+  
+  #5/19
+  count = 0
+
+while count < 10: # Add a colon
+  print count
+  # Increment count
+  count = count + 1
+  # can also put count += 1
+  
+  #6/19
+  count = 0
+
+while True:
+  print count
+  count += 1
+  if count >= 10:
+    break
+
+
+#7/19
+import random
+
+print "Lucky Numbers! 3 numbers will be generated."
+print "If one of them is a '5', you lose!"
+
+count = 0
+while count < 3:
+  num = random.randint(1, 6)
+  print num
+  if num == 5:
+    print "Sorry, you lose!"
+    break
+  count += 1
+#the else block will execute anytime the while loop condition is evaluated to False. 
+else:   
+  print "You win!"
+  
+  
+  
+  #8/19
+  from random import randint
+
+# Generates a number from 1 through 10 inclusive
+random_number = randint(1, 10)
+
+guesses_left = 3
+# Start your game!
+#guess = int(raw_input("Guess a number: "))
+
+while guess != random_number and guesses_left > 0:  # check bug
+  guess = int(raw_input("Guess a number: "))  
+  guesses_left -= 1
+  print "Guess again!"
+  if guesses_left == 0:
+    print "Sorry, you loose!"
+    break
+
+else:
+  print "You Win!"
+  
+  
+  #9/19
+  print "Counting..."
+
+for i in range(20):
+  print i
+  
+  #10/19
+  hobbies = []
+
+# Add your code below!
+
+for num in range(3):
+  hobby =  raw_input("Tell me one of your favorite hobbies: ")
+  hobbies.append(hobby)
+
+print hobbies
+
+
+#11/19
+thing = "spam!"
+
+for c in thing:
+  print c
+
+word = "eggs!"
+
+# Your code here!
+for b in word:
+  print b
+  
+  #12/19
+  phrase = "A bird in the hand..."
+
+# Add your for loop
+for char in phrase:
+  if char == "A" or char == 'a':
+    print "X",
+  else:
+    print char,
+
+
+
+
+#Don't delete this print statement!
+print
+
+
+#13/19
+numbers  = [7, 9, 12, 54, 99]
+
+print "This list contains: "
+
+for num in numbers:
+  print num
+
+# Add your loop below!
+for num in numbers:
+  print num ** 2
+  
+  
+  
+  #14/19 prints dictionary and key
+ d = {'a': 'apple', 'b': 'berry', 'c': 'cherry'}
+
+for key in d:
+  # Your code here!
+  print key, d[key]
+  
+  
+  #15/19 index +1 helps so that pizza isn't listed as 0, enumerate counts the items in choices
+  choices = ['pizza', 'pasta', 'salad', 'nachos']
+
+print 'Your choices are:'
+for index, item in enumerate(choices):
+  print index + 1, item
+  
+  
+ #16/19
+#It’s also common to need to iterate over two lists at once. This is where the built-in zip function comes in handy.
+#zip will create pairs of elements when passed two lists, and will stop at the end of the shorter list.
+#zip can handle three or more lists as well!
+
+list_a = [3, 9, 17, 15, 19]
+list_b = [2, 4, 8, 10, 30, 40, 50, 60, 70, 80, 90]
+
+for a, b in zip(list_a, list_b):
+  # Add your code here!
+  if a > b:
+    print a
+  else:
+    print b
+  
+  
+  #17/19
+#Just like with while, for loops may have an else associated with them.
+#In this case, the else statement is executed after the for, but only if the for 
+#ends normally—that is, not with a break. This code will break when it hits #'tomato', so the else block won’t be executed.
+#change tomato to tamato and see how this loop works
+
+fruits = ['banana', 'apple', 'orange', 'tomato', 'pear', 'grape']
+
+print 'You have...'
+for f in fruits:
+  if f == 'tomato':
+    print 'A tomato is not a fruit!' # (It actually is.)
+    break
+  print 'A', f
+else:
+  print 'A fine selection of fruits!'
+  
+  
+  
+  #18/19 <<< same as 17/19 but just change tomato
+  #Just like with while, for loops may have an else associated with them.
+#In this case, the else statement is executed after the for, but only if the for 
+#ends normally—that is, not with a break. This code will break when it hits #'tomato', so the else block won’t be executed.
+#change tomato to tamato and see how this loop works
+
+fruits = ['banana', 'apple', 'orange', 'tomato', 'pear', 'grape']
+
+print 'You have...'
+for f in fruits:
+  if f == 'tomato':
+    print 'A tomato is not a fruit!' # (It actually is.)
+    break
+  print 'A', f
+else:
+  print 'A fine selection of fruits!'
+  
+  
+  
+  #19/19
+  # make your own for else statement
+  pizza_toppings = ["pepperoni", "mushrooms", "black olivess", "pineapple"]
+
+print "We have..."
+
+for t in pizza_toppings:
+  if t == "pineapple":
+    print t, "- That's disgusting!"
+    break
+  print t
+else:
+  print "A fine selection of toppings!"
+  
+  
+   
