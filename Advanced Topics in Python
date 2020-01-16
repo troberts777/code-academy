@@ -1,0 +1,108 @@
+#1/18
+#Create your own Python dictionary, my_dict, in the editor to the right with two or three key/value pairs.
+#Then, print the result of calling the my_dict.items().
+
+my_dict = {"Name": "Fred",
+          "Age": 50,
+          "Sex": "Male",
+          "Height": 70,
+          "Weight": 200}
+
+print my_dict.items()
+
+
+#2/18
+#While .items() returns an array of tuples with each tuple consisting of a key/value pair from the dictionary:
+#The .keys() method returns a list of the dictionary’s keys, and
+#The .values() method returns a list of the dictionary’s values.
+#Again, these methods will not return the keys or values from the dictionary in any specific order.
+#You can think of a tuple as an immutable (that is, unchangeable) list. Tuples are surrounded by ()s and can contain any data type.
+#Remove your call to .items() and replace it with a call to .keys() and a call to .values(), each on its own line. Make sure to print both!
+my_dict = {"Name": "Fred",
+          "Age": 50,
+          "Sex": "Male",
+          "Height": 70,
+          "Weight": 200}
+
+print my_dict.keys()
+print my_dict.values()
+
+
+#3/18
+#For iterating over lists, tuples, dictionaries, and strings, Python also includes a special keyword: in. 
+#You can use in very intuitively, like so:
+"""
+for number in range(5):
+  print number,
+
+d = { 
+  "name": "Eric",
+  "age": 26
+}
+
+for key in d:
+  print key, d[key],
+
+for letter in "Eric":
+  print letter,  # note the comma!
+  """
+#In the example above, first we create and iterate through a range, printing out 0 1 2 3 4. Note that the trailing comma ensures
+#that we keep printing on the same line.
+#Next, we create a dictionary and iterate through, printing out age 26 name Eric. Dictionaries have no specific order.
+#Finally, we iterate through the letters of a string, printing out E r i c.
+#For each key in my_dict: print out the key , then a space, then the value stored by that key. (You should use print a, 
+#b rather than print a + " " + b.)
+
+my_dict = {"Name:": "Fred",
+          "Age:": 50,
+          "Sex:": "Male",
+          "Height:": 70,
+          "Weight:": 200}
+
+for key in my_dict:
+  print key, my_dict[key]
+  
+  
+  #4/18
+#Let’s say you wanted to build a list of the numbers from 0 to 50 (inclusive). We could do this pretty easily:
+#my_list = range(51)
+#But what if we wanted to generate a list according to some logic—for example, a list of all the even numbers from 0 to 50?
+#Python’s answer to this is the list comprehension. List comprehensions are a powerful way to generate lists using the for/in 
+#and if keywords we’ve learned.
+#Check out the list comprehension example in the editor. When you’re pretty sure you know what it’ll do, click Run to see it in action.
+
+evens_to_50 = [i for i in range(51) if i % 2 == 0]
+print evens_to_50
+
+
+
+#5/18
+
+#Here’s a simple example of list comprehension syntax:
+#new_list = [x for x in range(1, 6)]
+# => [1, 2, 3, 4, 5]
+#This will create a new_list populated by the numbers one to five. If you want those numbers doubled, you could use:
+#doubles = [x * 2 for x in range(1, 6)]
+# => [2, 4, 6, 8, 10]
+#And if you only wanted the doubled numbers that are evenly divisible by three:
+#doubles_by_3 = [x * 2 for x in range(1, 6) if (x * 2) % 3 == 0]
+# => [6]
+#Use a list comprehension to build a list called even_squares in the editor.
+#Your even_squares list should include the squares of the even numbers between 1 to 11. Your list should start [4, 16, 36...]
+#and go from there.
+#You can use x ** 2 to square a number, and x % 2 == 0 to check if it’s even.
+
+doubles_by_3 = [x * 2 for x in range(1, 6) if (x * 2) % 3 == 0]
+
+# Complete the following line. Use the line above for help.
+even_squares = [x ** 2 for x in range(1,11) if (x ** 2) % 2 == 0]
+
+print even_squares
+
+
+
+#6/18
+
+
+
+
