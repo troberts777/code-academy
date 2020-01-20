@@ -1,3 +1,4 @@
+#
 d_ft = int(input("Input distance in feet: "))
 d_inches = d_ft * 12
 d_yards = d_ft / 3.0
